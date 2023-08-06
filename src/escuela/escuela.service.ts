@@ -1,9 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { CreateEscuelaDto } from './dto/create-escuela.dto';
 import { UpdateEscuelaDto } from './dto/update-escuela.dto';
+import { Repository } from 'typeorm';
+import { Escuela } from './entities/escuela.entity';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class EscuelaService {
+  private escuelas : Escuela[] = [];
+
+  constructor (@InjectRepository(Escuela)
+  private readonly escuelaRepository : Repository<Escuela>) {}
+
   create(createEscuelaDto: CreateEscuelaDto) {
     return 'This action adds a new escuela';
   }

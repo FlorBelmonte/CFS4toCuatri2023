@@ -1,9 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { CreateEstudianteDto } from './dto/create-estudiante.dto';
 import { UpdateEstudianteDto } from './dto/update-estudiante.dto';
+import { Estudiante } from './entities/estudiante.entity';
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
 
 @Injectable()
 export class EstudianteService {
+private estudiantes: Estudiante[] = [];
+constructor (@InjectRepository(Estudiante)
+  private readonly estudianteRepository : Repository<Estudiante>) {}
+
   create(createEstudianteDto: CreateEstudianteDto) {
     return 'This action adds a new estudiante';
   }

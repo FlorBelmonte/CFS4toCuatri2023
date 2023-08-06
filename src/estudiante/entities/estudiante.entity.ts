@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
-@Entity()
+@Entity('estudiantes')
 export class Estudiante {
   @PrimaryGeneratedColumn()
   id: number;
