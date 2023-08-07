@@ -3,6 +3,7 @@ import { EscuelaService } from './escuela.service';
 import { EscuelaController } from './escuela.controller';
 import { Escuela } from './entities/escuela.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 @Module({
   imports: [

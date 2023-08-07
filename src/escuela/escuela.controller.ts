@@ -21,7 +21,15 @@ export class EscuelaController {
   findOne(@Param('id') id: string) {
     return this.escuelaService.findOne(+id);
   }
+  // @Get('get-all')
+  // async getAllEscuelas() {
+  //   return await this.escuelaService.getAll();
+  // }
 
+  // @Get(':id')
+  // async getEscuelaById(@Param('id') id: number) {
+  //   return await this.escuelaService.getById(id);
+  // }
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateEscuelaDto: UpdateEscuelaDto) {
     return this.escuelaService.update(+id, updateEscuelaDto);
