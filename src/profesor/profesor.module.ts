@@ -3,11 +3,12 @@ import { ProfesorService } from './profesor.service';
 import { ProfesorController } from './profesor.controller';
 import { Profesor } from './entities/profesor.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Clase } from 'src/clase/entities/clase.entity';
 
 @Module({
   imports: [
     TypeOrmModule.forFeature( [
-    Profesor
+    Profesor, Clase
     ] )
     ],
   controllers: [ProfesorController],

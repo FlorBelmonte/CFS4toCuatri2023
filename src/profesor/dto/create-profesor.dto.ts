@@ -1,1 +1,4 @@
-export class CreateProfesorDto {}
+export class CreateProfesorDto {
+    apellidoNombres: string;
+
+}

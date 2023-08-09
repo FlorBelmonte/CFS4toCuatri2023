@@ -32,3 +32,4 @@ export class ProfesorController {
     return this.profesorService.remove(+id);
   }
 }
+

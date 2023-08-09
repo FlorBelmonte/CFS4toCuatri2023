@@ -1,11 +1,19 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('estudiantes')
 export class Estudiante {
   @PrimaryGeneratedColumn()
-  id: number;
+  idEstudiante: number;
 
   @Column()
-  nombre: string;
+  apellidoNombres: string;
 
+  @Column()
+  fechaNacimiento: string;
+
+  constructor(apellidoNombres: string, fechaNacimiento: string) {
+    this.apellidoNombres = apellidoNombres;
+    this.fechaNacimiento = fechaNacimiento;
+  }
 }
+

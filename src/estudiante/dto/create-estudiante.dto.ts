@@ -1,1 +1,4 @@
-export class CreateEstudianteDto {}
+export class CreateEstudianteDto {
+    apellidoNombres: string;
+    fechaNacimiento: string;
+}
